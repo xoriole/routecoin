@@ -1,0 +1,85 @@
+<%+header%>
+<%-
+require("luci.sys")
+
+local data = {}
+local whitelisted = {}
+
+local whitelist = luci.sys.exec("/usr/sbin/whitelist")
+for line in string.gmatch(whitelist, "[^\n]+\n") do
+  local addr = string.match(line, "^%s*([%x.:]+)")
+  local comment = string.match(line, '#%s*(.*)$') or ""
+  table.insert(data, { addr = addr, comment = comment })
+  whitelisted[addr] = true
+end
+
+
+local wan_devices = {}
+for line in io.lines("/var/state/network") do
+  local ifname = string.match(line, "network.wan.ifname%s*=%s*([%w%._-]+)")
+  if ifname then
+    wan_devices[ifname] = true
+  end
+  local devices = string.match(line, "network.wan.device%s*=%s*(.+)")
+  if devices then
+    for device in string.gmatch(devices, "[%w%._-]+") do
+      wan_devices[device] = true
+    end
+  end
+end
+
+local hostname = {}
+for line in io.lines("/var/dhcp.leases") do
+  local addr, ip, name = string.match(line, "%d+%s+([%x:.]+)%s+([%x:.]+)%s+([^%s]+)")
+  if name and name ~= "*" then
+    hostname[addr] = name
+  end
+end
+
+local admin_ip = luci.http.getenv("REMOTE_ADDR")
+local admin_addr = ""
+
+-%>
+<%-
+for i, entry in ipairs(luci.sys.net.arptable()) do
+  local addr = string.lower(entry["HW address"])
+  local ip = entry["IP address"]
+  if not wan_devices[entry["Device"]] and not whitelisted[addr] then
+    local star = ""
+    if ip == admin_ip then
+      star = "* "
+      admin_addr = addr
+    end
+    -%>
+    <%=addr%><br/>
+      <%-
+  end
+end
+-%>
+
+<div class="cbi-map">
+  <h2><a id="content" name="content">Connected Users</a></h2>
+  <fieldset class="cbi-section">
+    <div class="cbi-section-node">
+      <div class="cbi-value">
+        <textarea class="cbi-input-textarea" style="width: 100%;" rows="20" name="content">
+          <%-=luci.util.pcdata(content)-%>
+        </textarea>
+      </div>
+    </div>
+    <br/>
+  </fieldset>
+  <br/>
+</div>
+
+st of connected users </h2>
+<%-
+for i, entry in ipairs(luci.sys.net.arptable()) do
+  local addr = string.lower(entry["HW address"])
+  local ip = entry["IP address"]
+-%>
+<%=addr%>&nbsp;<%=ip%><br/>
+<%-
+end
+-%>
+<%+footer%> 

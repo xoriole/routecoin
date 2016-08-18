@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>asm_arm.inc</itemPath>
+      <itemPath>asm_arm_mult_square.inc</itemPath>
+      <itemPath>asm_arm_mult_square_umaal.inc</itemPath>
+      <itemPath>asm_avr.inc</itemPath>
+      <itemPath>asm_avr_mult_square.inc</itemPath>
+      <itemPath>curve-specific.inc</itemPath>
+      <itemPath>platform-specific.inc</itemPath>
+      <itemPath>types.h</itemPath>
+      <itemPath>uECC.h</itemPath>
+      <itemPath>uECC_vli.h</itemPath>
+      <itemPath>util.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>base58.c</itemPath>
+      <itemPath>base58.h</itemPath>
+      <itemPath>bignum.c</itemPath>
+      <itemPath>bignum.h</itemPath>
+      <itemPath>bip32.c</itemPath>
+      <itemPath>bip32.h</itemPath>
+      <itemPath>curve25519-donna-32bit.h</itemPath>
+      <itemPath>curve25519-donna-64bit.h</itemPath>
+      <itemPath>curve25519-donna-helpers.h</itemPath>
+      <itemPath>curve25519-donna-sse2.h</itemPath>
+      <itemPath>curves.c</itemPath>
+      <itemPath>curves.h</itemPath>
+      <itemPath>ecdsa.c</itemPath>
+      <itemPath>ecdsa.h</itemPath>
+      <itemPath>ed25519-donna-32bit-sse2.h</itemPath>
+      <itemPath>ed25519-donna-32bit-tables.h</itemPath>
+      <itemPath>ed25519-donna-64bit-sse2.h</itemPath>
+      <itemPath>ed25519-donna-64bit-tables.h</itemPath>
+      <itemPath>ed25519-donna-64bit-x86-32bit.h</itemPath>
+      <itemPath>ed25519-donna-64bit-x86.h</itemPath>
+      <itemPath>ed25519-donna-basepoint-table.h</itemPath>
+      <itemPath>ed25519-donna-batchverify.h</itemPath>
+      <itemPath>ed25519-donna-impl-base.h</itemPath>
+      <itemPath>ed25519-donna-impl-sse2.h</itemPath>
+      <itemPath>ed25519-donna-portable-identify.h</itemPath>
+      <itemPath>ed25519-donna-portable.h</itemPath>
+      <itemPath>ed25519-donna.h</itemPath>
+      <itemPath>ed25519-hash-custom.h</itemPath>
+      <itemPath>ed25519-hash.h</itemPath>
+      <itemPath>ed25519-randombytes-custom.h</itemPath>
+      <itemPath>ed25519-randombytes.h</itemPath>
+      <itemPath>ed25519.c</itemPath>
+      <itemPath>ed25519.h</itemPath>
+      <itemPath>hmac.c</itemPath>
+      <itemPath>hmac.h</itemPath>
+      <itemPath>macros.h</itemPath>
+      <itemPath>main.c</itemPath>
+      <itemPath>modm-donna-32bit.h</itemPath>
+      <itemPath>modm-donna-64bit.h</itemPath>
+      <itemPath>newmain.c</itemPath>
+      <itemPath>nist256p1.c</itemPath>
+      <itemPath>nist256p1.h</itemPath>
+      <itemPath>nist256p1.table</itemPath>
+      <itemPath>options.h</itemPath>
+      <itemPath>rand.c</itemPath>
+      <itemPath>rand.h</itemPath>
+      <itemPath>ripemd160.c</itemPath>
+      <itemPath>ripemd160.h</itemPath>
+      <itemPath>secp256k1.c</itemPath>
+      <itemPath>secp256k1.h</itemPath>
+      <itemPath>secp256k1.table</itemPath>
+      <itemPath>sha2.c</itemPath>
+      <itemPath>sha2.h</itemPath>
+      <itemPath>uECC.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>trezor-crypto</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-lssl -lcrypto</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="asm_arm.inc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="asm_arm_mult_square.inc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="asm_arm_mult_square_umaal.inc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="asm_avr.inc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="asm_avr_mult_square.inc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="base58.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="base58.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="bignum.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bignum.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="bip32.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bip32.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="curve-specific.inc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="curve25519-donna-32bit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="curve25519-donna-64bit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="curve25519-donna-helpers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="curve25519-donna-sse2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="curves.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="curves.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ecdsa.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ecdsa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-32bit-sse2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-32bit-tables.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-64bit-sse2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-64bit-tables.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-64bit-x86-32bit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-64bit-x86.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-basepoint-table.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-batchverify.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-impl-base.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-impl-sse2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-portable-identify.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-portable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-hash-custom.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-hash.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-randombytes-custom.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-randombytes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ed25519.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="hmac.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="hmac.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="macros.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="modm-donna-32bit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modm-donna-64bit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="newmain.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nist256p1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nist256p1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nist256p1.table" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="options.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="platform-specific.inc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="rand.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="rand.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ripemd160.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripemd160.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="secp256k1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="secp256k1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="secp256k1.table" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sha2.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="sha2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="types.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="uECC.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="uECC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="uECC_vli.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="util.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="asm_arm.inc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="asm_arm_mult_square.inc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="asm_arm_mult_square_umaal.inc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="asm_avr.inc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="asm_avr_mult_square.inc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="base58.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="base58.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="bignum.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bignum.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="bip32.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bip32.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="curve-specific.inc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="curve25519-donna-32bit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="curve25519-donna-64bit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="curve25519-donna-helpers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="curve25519-donna-sse2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="curves.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="curves.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ecdsa.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ecdsa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-32bit-sse2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-32bit-tables.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-64bit-sse2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-64bit-tables.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-64bit-x86-32bit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-64bit-x86.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-basepoint-table.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-batchverify.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-impl-base.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-impl-sse2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-portable-identify.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna-portable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-donna.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-hash-custom.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-hash.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-randombytes-custom.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519-randombytes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ed25519.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ed25519.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="hmac.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="hmac.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="macros.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="modm-donna-32bit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="modm-donna-64bit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="newmain.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nist256p1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nist256p1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="nist256p1.table" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="options.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="platform-specific.inc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="rand.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="rand.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ripemd160.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripemd160.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="secp256k1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="secp256k1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="secp256k1.table" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sha2.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="sha2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="types.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="uECC.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="uECC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="uECC_vli.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="util.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
